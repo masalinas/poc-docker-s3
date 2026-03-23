@@ -67,4 +67,4 @@ $ docker run -d \
 
 ## Some links
 
-- [rclone doc](https://rclone.org/docker/): official documentation
+- [rclone docker plugin docs](https://rclone.org/docker/): official documentation
