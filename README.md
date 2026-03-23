@@ -1,5 +1,5 @@
 # Description
-PoC Docker with AWS S3
+PoC Docker with AWS S3. We will use the [rclone docker plugin](https://hub.docker.com/r/rclone/docker-volume-rclone)
 
 ## Steps 01: Install FUSE (requirement for rclone)
 ```
@@ -64,3 +64,7 @@ $ docker run -d \
 ```
 
 ![Docker Container](captures/container.png "Docker Container")
+
+## Some links
+
+- [rclone doc](https://rclone.org/docker/): official documentation
