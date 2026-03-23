@@ -65,6 +65,6 @@ $ docker run -d \
 
 ![Docker Container](captures/container.png "Docker Container")
 
-## Some links
+## Some links
 
 - [rclone docker plugin docs](https://rclone.org/docker/): official documentation
