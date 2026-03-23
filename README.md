@@ -35,6 +35,16 @@ $ docker plugin install rclone/docker-volume-rclone:amd64 \
 ## Steps 05: Create a bucket in AWS/Region
 ![AWS Bucket](captures/aws_bucket.png "AWS Bucket")
 
+We can test that we our credentials we see our index.html file uploaded to the bucket using the AWS CLI
+
+```
+$ AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY \
+AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY \
+aws s3 ls s3://miweb-924628188769-us-east-1-an
+
+2026-03-23 16:45:20         22 index.html
+```
+
 ## Steps 06: Create the Docker Volume
 ```
 $ docker volume create miweb \
