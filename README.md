@@ -2,7 +2,7 @@
 PoC Docker with AWS S3. We will use the [rclone docker plugin](https://hub.docker.com/r/rclone/docker-volume-rclone)
 
 ## Steps 01: Install FUSE (requirement for rclone)
-Fuse3 it's a library to be use by any app to interact with the kernel modules used to mount folder in your host.
+Fuse3 it's a library to be use by any application, in our case by the docker plugin, to interact with the kernel modules used to mount folders in your host.
 
 ```
 $ sudo apt update && sudo apt install fuse3 -y
