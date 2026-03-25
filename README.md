@@ -5,6 +5,29 @@ PoC Docker with AWS S3. We will use the [rclone docker plugin](https://hub.docke
 ```
 $ sudo apt update && sudo apt install fuse3 -y
 ```
+Also you must configure fuse to allow use the volume to anyone like this. Edit `/etc/fuse.conf` and uncomment `user_allow_other`. After this
+we must use the plugin argument `-o allow_other=true` when start a docker container
+
+```
+# The file /etc/fuse.conf allows for the following parameters:
+#
+# user_allow_other - Using the allow_other mount option works fine as root, in
+# order to have it work as user you need user_allow_other in /etc/fuse.conf as
+# well. (This option allows users to use the allow_other option.) You need
+# allow_other if you want users other than the owner to access a mounted fuse.
+# This option must appear on a line by itself. There is no value, just the
+# presence of the option.
+
+user_allow_other
+
+
+# mount_max = n - this option sets the maximum number of mounts.
+# Currently (2014) it must be typed exactly as shown
+# (with a single space before and after the equals sign).
+
+#mount_max = 1000
+```
+
 ## Steps 02: Create the required plugin directories
 ```
 $ sudo mkdir -p /var/lib/docker-plugins/rclone/config
