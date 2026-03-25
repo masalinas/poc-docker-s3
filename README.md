@@ -49,8 +49,8 @@ $ sudo nano /var/lib/docker-plugins/rclone/config/rclone.conf
 [mys3]
 type = s3
 provider = AWS
-access_key_id = YOUR_ACCESS_KEY
-secret_access_key = YOUR_SECRET_KEY
+access_key_id = <YOUR_ACCESS_KEY>
+secret_access_key = <YOUR_SECRET_KEY>
 region = us-east-1
 endpoint = s3.us-east-1.amazonaws.com
 ```
