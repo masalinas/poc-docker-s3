@@ -31,12 +31,18 @@ user_allow_other
 ```
 
 ## Steps 02: Create the required plugin directories
+
+For the docker plugin rclone we must create these folder first to install it:
+
 ```
 $ sudo mkdir -p /var/lib/docker-plugins/rclone/config
 $ sudo mkdir -p /var/lib/docker-plugins/rclone/cache
 ```
 
 ## Steps 03: Create the Rclone Config
+
+Also we must create a rclone config file like this:
+
 ```
 $ sudo nano /var/lib/docker-plugins/rclone/config/rclone.conf
 
@@ -50,6 +56,9 @@ endpoint = s3.us-east-1.amazonaws.com
 ```
 
 ## Steps 04: Install the Rclone Plugin
+
+After create the folders and configurations we can now install the plugin. Is everything is ok, the plugin it will have the status available
+
 ```
 $ docker plugin install rclone/docker-volume-rclone:amd64 \
   --alias rclone \
